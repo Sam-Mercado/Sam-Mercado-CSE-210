@@ -42,7 +42,6 @@ class Program
             userNum = PromptUserNumber();
             squareNum = SquareNumber(userNum);
             Console.Write($"{userName}, the square of your number is {squareNum}");
-
         }
 
         DisplayResult();
