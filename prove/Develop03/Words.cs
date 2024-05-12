@@ -9,6 +9,7 @@ class Word
     public Word(string Text)
     {
         _text = Text;
+        
     }
 
     public void Hide()
@@ -23,7 +24,7 @@ class Word
     public void Show()
     {
         
-        
+        Console.Write("");
         
     }
     public bool IsHidden()
@@ -31,6 +32,6 @@ class Word
         return true;
     }
     public string GetDisplayText(){
-        return "";
+        return _text;
      }
 }
