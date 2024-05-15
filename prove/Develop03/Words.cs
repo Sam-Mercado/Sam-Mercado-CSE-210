@@ -4,12 +4,12 @@ using System;
 class Word
 {
     public string _text;
-    public bool _isHidden;
+    //public bool _isHidden;
 
     public Word(string Text)
     {
         _text = Text;
-        
+
     }
 
     public void Hide()
@@ -23,15 +23,16 @@ class Word
     }
     public void Show()
     {
-        
+
         Console.Write("");
-        
+
     }
     public bool IsHidden()
     {
         return true;
     }
-    public string GetDisplayText(){
+    public string GetDisplayText()
+    {
         return _text;
-     }
+    }
 }

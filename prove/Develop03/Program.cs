@@ -13,8 +13,8 @@ class Program
         Word numHide = word1;
         //Console.WriteLine(numHide);
 
-        Scripture scripture1 = new Scripture(reference1, _text);
-        Console.WriteLine(scripture1.GetDisplayText());
+        //Scripture scripture1 = new Scripture(reference1, _text);
+        //Console.WriteLine(scripture1.GetDisplayText());
 
 
 
