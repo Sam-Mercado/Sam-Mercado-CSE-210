@@ -1,14 +1,29 @@
 using System;
 
-class Assignment {
-    private string _student;
+class Assignment
+{
+    protected string _student;
     private string _topic;
-    
-    public string GetSummary(string student, string topic){
+
+    public Assignment(string student, string topic)
+    {
         _student = student;
         _topic = topic;
-        return _student + _topic;
+    }
+    public string GetStudent()
+    {
+        return _student;
     }
 
+    //public string GetTopic()
+    //{
+    //   return _topic
+    //}
+    public string GetSummary()
+    {
+
+        return _student + "- " + _topic;
+    }
+
+
 }
-    

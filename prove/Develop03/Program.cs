@@ -4,13 +4,57 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference reference1 = new Reference("Proverbs", 3, 5, 6);
-        Console.WriteLine(reference1.GetDisplaytext());
 
-        Word word1 = new Word("Trust in the LORD with all your heart and lean not on your own understanding in all your ways acknowledge him, and he will make your paths straight");
-        Console.WriteLine(word1.GetDisplayText());
-        word1.Hide();
-        Word numHide = word1;
+        Scripture scripture = new(new Reference("Proverbs", 3, 5, 6), "Trust in the LORD with all your heart and lean not on your own understanding in all your ways acknowledge him, and he will make your paths straight");
+
+
+
+        //Console.WriteLine(" ----------------------------------------------------------");
+
+
+        while (true)
+        {
+            // CONSOLE CLEAR 
+            // script.GetDisplayText()
+            // PUT "Press enter to continue or type "quit" to exit: 
+            // input <- GET
+            // IF input EQUAL "quit"
+            //      BREAK
+            // IF script.AllWordsHidden()
+            //      BREAK
+            // script.HideRandomWords()
+
+            Console.Clear();
+
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.Write("Press enter to continue or type \"quit\" to exit: ");
+            string userinput = Console.ReadLine();
+
+            if (userinput.ToLower() == "quit")
+                break;
+            if (scripture.IsCompletelyHidden())
+                break;
+
+            if (string.IsNullOrEmpty(userinput))
+            {
+                scripture.HideRandomWords(3);
+                Console.WriteLine(scripture.GetDisplayText());
+                Console.Write("Press enter to continue or type \"quit\" to exit: " + userinput);
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
         //Console.WriteLine(numHide);
 
         //Scripture scripture1 = new Scripture(reference1, _text);
@@ -22,7 +66,6 @@ class Program
 
 
 
-        Console.WriteLine();
 
         //Reference reference2 = new Reference("Proverbs", 3, 5);
         //Console.WriteLine(reference2.GetDisplaytext());

@@ -1,10 +1,11 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 
 class Word
 {
-    public string _text;
-    //public bool _isHidden;
+    private string _text; // pass
+    private bool _isHidden; // Status (true or false)
 
     public Word(string Text)
     {
@@ -12,27 +13,39 @@ class Word
 
     }
 
+    // All logic is foced on the class, or focused on the manipulation of the class variables.
+
+    //
+    // SETTERS
+    //
     public void Hide()
     {
-        int numWords = _text.Length;
-
-        Random random = new Random();
-        int randomNumber = random.Next(0, numWords);
-        Console.WriteLine(randomNumber);
+        _isHidden = true;
 
     }
     public void Show()
     {
 
-        Console.Write("");
+        _isHidden = false;
 
     }
+
+    //
+    // GETTER
+    //
+
+    // Return the status of the word
     public bool IsHidden()
     {
-        return true;
+        return _isHidden;
     }
+
+
     public string GetDisplayText()
     {
-        return _text;
+        if (_isHidden)
+            return new string('_', _text.Length);
+        else
+            return _text;
     }
 }

@@ -33,7 +33,7 @@ class Program
                 numSum = numSum + gotNum;
             }
             //get the average
-            averNum = numSum / listNum;
+
 
             foreach (int i in numbers)
             {
