@@ -17,19 +17,34 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
-        Console.WriteLine("1. Start breathing activity");
-        Console.WriteLine("2. Start reflecting activity");
-        Console.WriteLine("3. Start listing activity");
-        Console.WriteLine("4. Quit");
-        Console.Write("Select a Choice from the menu \"number only\"");
+        Console.Clear();
+        Console.WriteLine(_description);
+        Console.WriteLine($"Welcome to the {_name} activity!!!!!");
+        Console.Write("How long do you want it to run for? ");
+        string activityDuration = Console.ReadLine();
+
+
+        while (!int.TryParse(activityDuration, out _duration))
+        {
+            Console.Clear();
+            Console.WriteLine("Invalid input. Please enter a valid number for the duration.");
+            Console.Write("How long do you want it to run for? ");
+            activityDuration = Console.ReadLine();
+        }
+        _duration = int.Parse(activityDuration);
 
     }
 
     public void DisplayEndingMessage()
     {
+        Console.Clear();
         Console.WriteLine("Well Done!!");
-        Console.WriteLine($"You just compleated {_duration} in the {_name}!!");
-        Thread.Sleep(3000);//add animation
+        Console.WriteLine($"You just compleated {_duration} seconds in the {_name}!!");
+        //Thread.Sleep(3000);//add animation
+        ShowSpiner(5);
+
+        Console.Clear();
+
     }
 
     public void ShowSpiner(int seconds)
@@ -52,7 +67,7 @@ public class Activity
             foreach (string s in spiner)
             {
                 Console.Write(s);
-                Thread.Sleep(800);
+                Thread.Sleep(500);
                 Console.Write("\b \b");
             }
         }
@@ -67,6 +82,7 @@ public class Activity
             Console.Write(seconds);
             Thread.Sleep(1000);
             Console.Write("\b \b");
+            seconds = seconds - 1;
 
         }
 
