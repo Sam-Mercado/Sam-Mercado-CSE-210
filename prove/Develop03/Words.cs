@@ -10,6 +10,7 @@ class Word
     public Word(string Text)
     {
         _text = Text;
+        _isHidden = false;
 
     }
 

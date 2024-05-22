@@ -14,15 +14,7 @@ class Program
 
         while (true)
         {
-            // CONSOLE CLEAR 
-            // script.GetDisplayText()
-            // PUT "Press enter to continue or type "quit" to exit: 
-            // input <- GET
-            // IF input EQUAL "quit"
-            //      BREAK
-            // IF script.AllWordsHidden()
-            //      BREAK
-            // script.HideRandomWords()
+
 
             Console.Clear();
 
