@@ -35,9 +35,9 @@ class Address
 
     }
 
-    public void DisplayAddress()
+    public string DisplayAddress()
     {
-        Console.WriteLine($"{_streetAddress} \n{_city}, {_state} \n{_country}");
+        return $"{_streetAddress} \n{_city}, {_state} \n{_country}";
     }
 
 
