@@ -8,7 +8,6 @@ class Program
         Video video1 = new Video("THE WORLD OF ZOMBIES", "ZOMBIE BOI", 300);
 
         Comment comment1 = new Comment("LucasPro", "This video was just Hilarious ");
-
         Comment comment2 = new Comment("Pwdro", "Super usefull ");
         Comment comment3 = new Comment("AaronPlay", "Would this acually wrork? ");
 

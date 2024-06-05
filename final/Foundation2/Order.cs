@@ -40,10 +40,11 @@ class Order
         foreach (Product p in _productsList)//there is an error here
         {
             string productName = p.GetProductName();
+            string productID = p.GetProductID();
             int price = p.GetTotal();
             int quantity = p.GetprodutQuantity();
             total = total + price;
-            Console.WriteLine($"{productName} {quantity} {price}");
+            Console.WriteLine($"{productID}-{productName} (Items:{quantity}, Price Each:{price})");
         }
         Console.WriteLine("\n------------------------------------------------------");
         Console.WriteLine($"Total: {total}$");

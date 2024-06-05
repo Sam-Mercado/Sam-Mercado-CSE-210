@@ -8,6 +8,7 @@ public class GoalManager
     public GoalManager()
     {
         _score = 0;
+        _goals = new List<Goal>()
 
 
 
@@ -83,9 +84,8 @@ public class GoalManager
 
 
                     //Creating an object and adding it to the list 
-                    List<Goal> simple = new List<Goal>();
-                    SimpleGoal simpleGoal = new SimpleGoal(name, description, points);
-                    simple.Add(simpleGoal);
+                    List<Goal> simple = new List<Goal>(new SimpleGoal(name, description, points));
+                    _goal.Add(simple);
 
 
                     break;
