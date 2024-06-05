@@ -11,7 +11,7 @@ public class Lecture : Event
         _type = "Lecture";
         _speaker = speaker;
         _capacity = capacity;
-        _description = ShortDescription();
+        _description = "This types of meetings have a speaker and have a limited capacity.";
 
     }
 
@@ -22,8 +22,5 @@ public class Lecture : Event
 
     }
 
-    public string ShortDescription()
-    {
-        return "This types of meetings have a speaker and have a limited capacity.";
-    }
+
 }

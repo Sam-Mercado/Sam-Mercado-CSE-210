@@ -11,7 +11,7 @@ public class Receptions : Event
     {
 
         _type = "Receptions";
-        _description = ShortDescription();
+        _description = "This type of event requires people to RSVP, or register, beforehand";
         _registeredBeforeHand = new List<string>();
 
         // if (registeredBefroreHand != null){
@@ -43,10 +43,6 @@ public class Receptions : Event
 
     }
 
-    public string ShortDescription()
-    {
-        return "This type of event requires people to RSVP, or register, beforehand";
-    }
 
 
 

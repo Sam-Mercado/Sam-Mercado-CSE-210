@@ -35,6 +35,10 @@ public class Event
     //if title is Outdoor this includes a statement of the weather.
 
     //}
+    public string ShortDescription()
+    {
+        return $"{_type} - {_title}: {_date} ";
+    }
 
 
 }

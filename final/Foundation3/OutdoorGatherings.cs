@@ -8,19 +8,12 @@ public class OutdoorGatherings : Event
     : base(title, date, time, street, city, state, country)
     {
         _type = "Outdoors";
-        _description = ShortDescription();
+        _description = "do not have a limit on attendees, but need to track the weather forecast.";
         _weather = "24˚C - Clear";
 
 
 
     }
-
-    public string ShortDescription()
-    {
-
-        return "do not have a limit on attendees, but need to track the weather forecast.";
-    }
-
     public void FullDetails()
     {
         Console.WriteLine("------------------------------------------------------");
