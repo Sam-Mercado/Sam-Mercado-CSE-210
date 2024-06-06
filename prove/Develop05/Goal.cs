@@ -16,11 +16,15 @@ public abstract class Goal
 
     public abstract int RecordEvent();
 
-    public abstract bool Iscompleate();
+    public virtual bool IsComplete()
+    {
+        return false;
+    }
 
     public virtual string GetDetailsString()
     {
-        return $"{_shortName} ({_description})";
+        string mark = IsComplete() ? "X" : " "; //tenery operator
+        return $"[{mark}] {_shortName} ({_description})";
     }
 
     public abstract string GetStringRepresentation();

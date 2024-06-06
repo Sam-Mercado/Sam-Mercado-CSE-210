@@ -1,32 +1,20 @@
 using System;
 
-abstract class EternalGoal : Goal
+class EternalGoal : Goal
 {
     public EternalGoal(string name, string description, int points) : base(name, description, points)
     {
-
     }
 
     public override int RecordEvent()
     {
-        int timesCompleated = 0;
-        if (isComplete())
-        {
-            timesCompleated += 1;
-            _points = timesCompleated * _points;
-
-        }
+        //add a message that you compleaded a x amount of points 
         return _points;
-    }
-
-    public virtual bool isComplete()
-    {
-        return false;
     }
 
     public override string GetStringRepresentation()
     {
-        return $"EternalGoal:|{_shortName}|{_description}|{_points}";
+        return $"EternalGoal:{_shortName}|{_description}|{_points}";
     }
 
 
